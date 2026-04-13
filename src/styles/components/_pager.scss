@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: $opeka-space-8;
+}
+
+.pager__dot {
+  flex-shrink: 0;
+  width: $opeka-space-4;
+  height: $opeka-space-4;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: $opeka-border-10;
+  cursor: pointer;
+  transition: background-color $transition-fast, width $transition-fast;
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $opeka-blue;
+    outline-offset: $focus-ring-offset;
+  }
+
+  &--active {
+    width: 2.5rem;
+    border-radius: $opeka-radius-pill;
+    background-color: $opeka-navy;
+  }
+}
+
+.pager__track {
+  position: relative;
+  width: 2.5rem;
+  height: $opeka-space-4;
+  overflow: hidden;
+  border-radius: $opeka-radius-pill;
+  background-color: $opeka-track-bg;
+}
+
+.pager__track-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0.625rem;
+  border-radius: $opeka-radius-pill;
+  background-color: $opeka-navy;
+}

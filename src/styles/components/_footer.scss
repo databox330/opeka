@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid $opeka-border-10;
+  background-color: $color-page-bg;
+}
+
+.site-footer__inner {
+  max-width: $opeka-container;
+  margin: 0 auto;
+  padding: $opeka-space-32 $opeka-space-36;
+  box-sizing: border-box;
+}
+
+.site-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $opeka-space-16;
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  line-height: $opeka-lh-16;
+  color: $opeka-text-muted;
+}
+
+.site-footer__link {
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  font-weight: 500;
+  line-height: $opeka-lh-16;
+  letter-spacing: $opeka-ls-14;
+  color: $opeka-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $opeka-blue-hover;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $opeka-blue;
+    outline-offset: $focus-ring-offset;
+    border-radius: $opeka-radius-12;
+  }
+}

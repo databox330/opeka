@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+@use '../base/reset';
+@use '../base/utilities';
+@use '../components/button';
+@use '../components/tag';
+@use '../components/text-link';
+@use '../components/pager';
+@use '../components/logo';
+@use '../components/header';
+@use '../components/footer';
+@use '../components/promo-card';
+@use '../components/cta-excursion';
+@use '../components/scroll-hint';
+@use '../sections/hero';
+
+body.page-home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $opeka-font;
+  color: $opeka-navy;
+  background-color: $color-surface;
+}
+
+.page-home__intro-stack {
+  display: flex;
+  flex-direction: column;
+  min-height: $opeka-banner-min-h;
+  position: relative;
+}
+
+body.page-home > .site-header {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  margin: $opeka-space-12 $opeka-space-20 0;
+  margin-inline: auto;
+}
+
+.page-home__note {
+  margin: 0;
+  padding: $opeka-space-16 $opeka-space-36;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  color: $opeka-text-muted;
+  text-align: center;
+}
+
+.page-home__main {
+  flex: 1 1 auto;
+}
