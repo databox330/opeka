@@ -1,0 +1,257 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.benefits {
+  position: relative;
+  overflow: hidden;
+  min-height: 54rem;
+  padding: $opeka-space-48 $opeka-space-36 5.5rem;
+  box-sizing: border-box;
+  background: linear-gradient(60.43deg, #98c5ff 45.13%, #2674d9 112.23%);
+}
+
+.benefits__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.benefits__bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  filter: blur(2.5rem);
+}
+
+.benefits__bg-blob--1 {
+  width: 90rem;
+  height: 75rem;
+  left: -55%;
+  top: -20%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
+  transform: rotate(10.6deg);
+}
+
+.benefits__bg-blob--2 {
+  width: 70rem;
+  height: 55rem;
+  right: -35%;
+  top: -40%;
+  background: radial-gradient(circle, rgba(255, 200, 160, 0.45) 0%, transparent 65%);
+  transform: rotate(126deg);
+}
+
+.benefits__watermark {
+  position: relative;
+  z-index: 0;
+  margin: 0 auto $opeka-space-48;
+  max-width: $opeka-container;
+  font-family: $opeka-font;
+  font-size: clamp(3rem, 8vw, 6.4rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: $opeka-navy;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.benefits__inner {
+  position: relative;
+  z-index: 1;
+  max-width: $opeka-container;
+  margin: 0 auto;
+}
+
+.benefits__list {
+  display: grid;
+  gap: $opeka-space-32;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: $opeka-space-24;
+  }
+}
+
+.benefits-card {
+  display: flex;
+  flex-direction: column;
+  gap: $opeka-space-24;
+}
+
+.benefits-card__panel {
+  background-color: $color-surface;
+  border-radius: $opeka-radius-32;
+  padding: $opeka-space-48;
+  padding-bottom: 6rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: $opeka-space-24;
+  box-shadow: 0 $opeka-space-24 $opeka-space-48 rgba(34, 41, 79, 0.08);
+}
+
+.benefits-card--tall .benefits-card__panel {
+  min-height: 18rem;
+}
+
+.benefits-card__title {
+  margin: 0;
+  font-family: $opeka-font;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+  color: $opeka-navy;
+}
+
+.benefits-card__text {
+  margin: 0;
+  max-width: 18.25rem;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-16;
+  font-weight: 400;
+  line-height: $opeka-lh-16;
+  color: $opeka-text-muted;
+}
+
+.benefits-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: $opeka-space-4;
+  margin-top: auto;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-16;
+  font-weight: 500;
+  line-height: $opeka-lh-16;
+  letter-spacing: $opeka-ls-tight;
+  color: $opeka-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $opeka-blue-hover;
+  }
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $opeka-blue;
+    outline-offset: $focus-ring-offset;
+    border-radius: $opeka-radius-12;
+  }
+}
+
+.benefits-card__link-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.benefits-card__media {
+  position: relative;
+  margin-top: -4.5rem;
+  margin-inline: auto;
+  width: min(100%, 25rem);
+  border-radius: $opeka-radius-20;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 $opeka-space-16 $opeka-space-32 rgba(34, 41, 79, 0.12);
+}
+
+.benefits-card--tall .benefits-card__media {
+  aspect-ratio: 1 / 1;
+  max-width: 12.5rem;
+}
+
+.benefits__list > li:last-child .benefits-card__media {
+  aspect-ratio: 214 / 285;
+  max-width: 13.375rem;
+}
+
+.benefits-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefits-card__plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.875rem;
+  height: 2.875rem;
+  padding: 0;
+  border: none;
+  border-radius: $opeka-radius-pill;
+  background-color: $opeka-white-20;
+  color: $color-surface;
+  backdrop-filter: blur($opeka-blur-frost);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $opeka-white-30;
+  }
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $color-surface;
+    outline-offset: $focus-ring-offset;
+  }
+}
+
+.benefits__cta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $opeka-space-16;
+  margin: $opeka-space-48 auto 0;
+  max-width: 12rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: $opeka-navy;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur($opeka-blur-header);
+
+  &:hover .benefits__cta-icon {
+    background-color: $opeka-black-8;
+  }
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $opeka-navy;
+    outline-offset: $focus-ring-offset;
+    border-radius: $opeka-radius-12;
+  }
+}
+
+.benefits__cta-text {
+  font-family: $opeka-font;
+  font-size: $opeka-fs-16;
+  font-weight: 500;
+  line-height: $opeka-lh-16;
+  letter-spacing: $opeka-ls-tight;
+}
+
+.benefits__cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.125rem;
+  height: 2.125rem;
+  border-radius: $opeka-radius-pill;
+  background-color: $opeka-black-5;
+  color: $opeka-navy;
+  backdrop-filter: blur($opeka-blur-frost);
+}

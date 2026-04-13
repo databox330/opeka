@@ -13,6 +13,7 @@ import '../components/text-link/text-link.scss'
 
 import '../sections/site-header/site-header.scss'
 import '../sections/hero/hero.scss'
+import '../sections/benefits/benefits.scss'
 import '../sections/site-footer/site-footer.scss'
 
 import { initHero } from './modules/scenes/hero.js'
