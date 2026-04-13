@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use '../../styles/variables' as *;
 
 .site-header {
   width: 100%;
@@ -8,6 +8,14 @@
   border-radius: $opeka-radius-12;
   background-color: $color-surface;
   box-sizing: border-box;
+}
+
+body.page-home > .site-header {
+  position: relative;
+  z-index: $z-site-header;
+  flex-shrink: 0;
+  margin: $opeka-space-12 $opeka-space-20 0;
+  margin-inline: auto;
 }
 
 .site-header__top {

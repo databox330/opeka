@@ -1,4 +1,21 @@
-@use '../abstracts/variables' as *;
+@use 'variables' as *;
+
+body {
+  font-family: $font-stack;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $opeka-navy;
+  background-color: $color-page-bg;
+}
+
+body.page-home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $opeka-font;
+  color: $opeka-navy;
+  background-color: $color-surface;
+}
 
 .visually-hidden {
   position: absolute;
@@ -14,7 +31,7 @@
 
 .visually-hidden:focus-visible {
   position: fixed;
-  z-index: 1000;
+  z-index: $z-skip-link;
   top: $opeka-space-8;
   left: $opeka-space-8;
   width: auto;

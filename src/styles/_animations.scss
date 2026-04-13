@@ -1,0 +1,13 @@
+// Transition tokens (use in components via @use '.../animations' as *)
+$transition-fast: 0.15s ease;
+$transition-medium: 0.25s ease;
+
+@keyframes opeka-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

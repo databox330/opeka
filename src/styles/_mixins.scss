@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin respond-to($key) {
+  $min: map.get($breakpoints, $key);
+  @if $min == null {
+    @error 'Unknown breakpoint `#{$key}`. Allowed: #{map.keys($breakpoints)}.';
+  }
+  @media (min-width: $min) {
+    @content;
+  }
+}
