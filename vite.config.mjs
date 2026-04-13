@@ -19,6 +19,20 @@ function expandIncludes(root, html, stack = new Set()) {
 function opekaIncludesPlugin() {
   const root = projectRoot
   const watchRoot = path.join(root, 'src')
+  const headerInclude = '<!-- @opeka-include src/sections/site-header/site-header.html -->'
+  const footerInclude = '<!-- @opeka-include src/sections/site-footer/site-footer.html -->'
+
+  function injectDefaultShell(html) {
+    let out = html
+    if (!out.includes(headerInclude)) {
+      out = out.replace(/(<body\b[^>]*>\s*)/i, `$1${headerInclude}\n`)
+    }
+    if (!out.includes(footerInclude)) {
+      out = out.replace(/(\s*<\/body>)/i, `\n    ${footerInclude}$1`)
+    }
+    return out
+  }
+
   return {
     name: 'opeka-includes',
     configureServer(server) {
@@ -27,17 +41,28 @@ function opekaIncludesPlugin() {
     transformIndexHtml: {
       order: 'pre',
       handler(html) {
-        if (!html.includes('@opeka-include')) return html
-        return expandIncludes(root, html)
+        const htmlWithDefaults = injectDefaultShell(html)
+        if (!htmlWithDefaults.includes('@opeka-include')) return htmlWithDefaults
+        return expandIncludes(root, htmlWithDefaults)
       },
     },
   }
 }
 
 export default defineConfig({
-  root: pagesRoot,
+  root: projectRoot,
   publicDir: false,
   plugins: [opekaIncludesPlugin()],
+  server: {
+    open: '/src/pages/index.html',
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['legacy-js-api'],
+      },
+    },
+  },
   build: {
     assetsInlineLimit: 0,
     outDir: path.join(projectRoot, 'dist'),

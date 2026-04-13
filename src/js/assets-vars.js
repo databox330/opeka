@@ -1,5 +1,5 @@
-import heroBlob from '../assets/images/opeka/hero-blob.png?url'
-import promoGlow from '../assets/images/opeka/promo-glow.png?url'
+import heroBlob from '../assets/images/hero-blob.png?url'
+import promoGlow from '../assets/images/promo-glow.png?url'
 
 const root = document.documentElement
 root.style.setProperty('--opeka-img-hero-blob', `url(${JSON.stringify(heroBlob)})`)

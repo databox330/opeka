@@ -1,24 +1,214 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .site-footer {
+  position: relative;
   margin-top: auto;
+  overflow: hidden;
+  background-color: $color-surface;
   border-top: 1px solid $opeka-border-10;
-  background-color: $color-page-bg;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  left: -18rem;
+  bottom: -14rem;
+  width: 45rem;
+  height: 45rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 133, 62, 0.26) 0%, rgba(255, 133, 62, 0) 70%);
+  pointer-events: none;
+}
+
+.site-footer::after {
+  content: '';
+  position: absolute;
+  top: -20rem;
+  right: -12rem;
+  width: 42rem;
+  height: 42rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(38, 116, 217, 0.16) 0%, rgba(38, 116, 217, 0) 72%);
+  pointer-events: none;
+}
+
+.site-footer__hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $opeka-space-24;
+  padding: 7.5rem $opeka-space-36 6rem;
+  text-align: center;
+}
+
+.site-footer__logo {
+  height: auto;
+}
+
+.site-footer__hero-text {
+  margin: 0;
+  max-width: 35.5rem;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-16;
+  line-height: $opeka-lh-16;
+  color: $opeka-text-muted;
+}
+
+.site-footer__hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $opeka-space-4;
+  justify-content: center;
+}
+
+.site-footer__hero-btn {
+  min-height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 1.25rem;
 }
 
 .site-footer__inner {
+  position: relative;
+  z-index: 1;
   max-width: $opeka-container;
   margin: 0 auto;
-  padding: $opeka-space-32 $opeka-space-36;
+  padding: $opeka-space-36;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
 }
 
-.site-footer__meta {
+.site-footer__nav-grid {
+  display: grid;
+  gap: $opeka-space-24;
+}
+
+.site-footer__col-title {
+  margin: 0 0 $opeka-space-16;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  line-height: 1.125rem;
+  letter-spacing: -0.01em;
+  color: $opeka-text-muted;
+  font-weight: 400;
+}
+
+.site-footer__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
+  flex-direction: column;
+  gap: $opeka-space-8;
+}
+
+.site-footer__links a {
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  line-height: 1rem;
+  letter-spacing: -0.01em;
+  color: $opeka-navy;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer__links a:hover {
+  color: $opeka-blue;
+}
+
+.site-footer__rating {
+  padding: $opeka-space-24;
+  border: 1px solid $opeka-border-10;
+  border-radius: 1.875rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur($opeka-blur-frost);
+}
+
+.site-footer__rating-qr {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: $opeka-space-12;
+  margin-bottom: $opeka-space-12;
+}
+
+.site-footer__rating-text {
+  margin: 0 0 $opeka-space-12;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  line-height: 1.125rem;
+  letter-spacing: -0.01em;
+  color: $opeka-text-muted;
+}
+
+.site-footer__rating-link {
+  font-size: $opeka-fs-14;
+  line-height: 1rem;
+}
+
+.site-footer__contacts-row {
+  display: grid;
+  gap: $opeka-space-24;
+}
+
+.site-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: $opeka-space-8;
+}
+
+.site-footer__contact-title {
+  margin: 0;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: -0.01em;
+  color: $opeka-text-muted;
+}
+
+.site-footer__contact a {
+  font-family: $opeka-font;
+  font-size: $opeka-fs-16;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: -0.02em;
+  color: $opeka-navy;
+  text-decoration: none;
+}
+
+.site-footer__contact a:hover {
+  color: $opeka-blue;
+}
+
+.site-footer__socials {
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: $opeka-space-16;
+  gap: $opeka-space-4;
+}
+
+.site-footer__social {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.25rem;
+  background-color: $opeka-black-5;
+  color: $opeka-navy;
+  text-decoration: none;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer__social:hover {
+  background-color: $opeka-black-8;
 }
 
 .site-footer__copy {
@@ -27,6 +217,14 @@
   font-size: $opeka-fs-14;
   line-height: $opeka-lh-16;
   color: $opeka-text-muted;
+}
+
+.site-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $opeka-space-20;
 }
 
 .site-footer__link {
@@ -47,5 +245,50 @@
     outline: $focus-ring-width solid $opeka-blue;
     outline-offset: $focus-ring-offset;
     border-radius: $opeka-radius-12;
+  }
+}
+
+.site-footer__made-by {
+  margin: 0;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  line-height: 1.125rem;
+  letter-spacing: -0.01em;
+  color: $opeka-text-muted;
+}
+
+.site-footer__made-by a {
+  color: $opeka-navy;
+  text-decoration: none;
+  margin-left: $opeka-space-6;
+}
+
+.site-footer__to-top {
+  position: absolute;
+  top: $opeka-space-24;
+  right: $opeka-space-24;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.25rem;
+  background-color: $color-surface;
+  box-shadow: 0 1.5rem 3rem rgba(57, 38, 72, 0.08);
+  color: $opeka-navy;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@include respond-to(lg) {
+  .site-footer__nav-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(18rem, 22.3125rem);
+    align-items: start;
+  }
+
+  .site-footer__contacts-row {
+    grid-template-columns: repeat(4, minmax(0, 12.5rem)) minmax(18rem, 22.3125rem);
+    align-items: start;
   }
 }
