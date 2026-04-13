@@ -1,0 +1,130 @@
+@use '../../styles/abstracts/variables' as *;
+
+.site-header {
+  width: 100%;
+  max-width: calc($opeka-container - $opeka-space-40);
+  margin: 0 auto;
+  padding: 0 0 $opeka-space-16;
+  border-radius: $opeka-radius-12;
+  background-color: $color-surface;
+  box-sizing: border-box;
+}
+
+.site-header__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $opeka-space-16;
+  padding: $opeka-space-8 $opeka-space-16;
+  border-bottom: 1px solid $opeka-border-10;
+}
+
+.site-header__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $opeka-space-16;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header__list--meta {
+  gap: $opeka-space-16;
+}
+
+.site-header__item {
+  margin: 0;
+}
+
+.site-header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: $opeka-space-6;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  font-weight: 500;
+  line-height: $opeka-lh-16;
+  letter-spacing: $opeka-ls-14;
+  color: $opeka-text-muted;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    color: $opeka-navy;
+  }
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $opeka-blue;
+    outline-offset: $focus-ring-offset;
+    border-radius: $opeka-radius-12;
+  }
+}
+
+.site-header__link-icon {
+  flex-shrink: 0;
+}
+
+.site-header__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: $opeka-space-6;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  font-weight: 500;
+  line-height: $opeka-lh-16;
+  letter-spacing: $opeka-ls-14;
+  color: $opeka-text-muted;
+}
+
+.site-header__chevron {
+  flex-shrink: 0;
+  opacity: $opeka-opacity-meta-chevron;
+}
+
+.site-header__main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $opeka-space-24;
+  padding: 0 $opeka-space-16;
+}
+
+.site-header__start {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: $opeka-space-24;
+  min-width: 0;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $opeka-space-4;
+}
+
+.site-header__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $opeka-space-4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header__chip-item {
+  margin: 0;
+}
+
+.site-header__tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $opeka-space-4;
+}

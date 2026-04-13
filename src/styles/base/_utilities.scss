@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.visually-hidden:focus-visible {
+  position: fixed;
+  z-index: 1000;
+  top: $opeka-space-8;
+  left: $opeka-space-8;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: $opeka-space-8 $opeka-space-16;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: $opeka-blue;
+  color: $color-surface;
+  border-radius: $opeka-radius-12;
+}

@@ -1,0 +1,38 @@
+@use 'abstracts/variables' as *;
+@use 'base/reset';
+@use 'base/utilities';
+@use '../components/btn/btn';
+@use '../components/tag/tag';
+@use '../components/text-link/text-link';
+@use '../components/pager/pager';
+@use '../components/logo/logo';
+@use '../components/site-header/site-header';
+@use '../components/promo-card/promo-card';
+@use '../components/cta-excursion/cta-excursion';
+@use '../components/scroll-hint/scroll-hint';
+@use '../components/main-banner/main-banner';
+
+body {
+  font-family: $opeka-font;
+  color: $opeka-navy;
+  background-color: $color-surface;
+}
+
+.page-home__note {
+  margin: 0;
+  padding: $opeka-space-16 $opeka-space-36;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-14;
+  color: $opeka-text-muted;
+  text-align: center;
+}
+
+.page-home__note a {
+  color: $opeka-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $opeka-blue-hover;
+    text-decoration: underline;
+  }
+}

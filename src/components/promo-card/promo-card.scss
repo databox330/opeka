@@ -1,0 +1,114 @@
+@use '../../styles/abstracts/variables' as *;
+
+.promo-card {
+  position: relative;
+  width: 100%;
+  max-width: 22.5rem;
+}
+
+.promo-card__frame {
+  position: relative;
+}
+
+.promo-card__frost {
+  position: absolute;
+  border-radius: $opeka-radius-32;
+  backdrop-filter: blur($opeka-blur-card);
+  pointer-events: none;
+
+  &--back {
+    inset: (-$opeka-space-8);
+    background-color: $opeka-white-30;
+    transform: rotate(-4deg);
+  }
+
+  &--mid {
+    inset: (-$opeka-space-12) (-$opeka-space-8) (-$opeka-space-20) (-$opeka-space-4);
+    background-color: $opeka-white-44;
+    transform: rotate(-2.5deg);
+  }
+}
+
+.promo-card__surface {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $opeka-space-32;
+  min-height: 19.125rem;
+  padding: $opeka-space-24;
+  border-radius: $opeka-radius-32;
+  background-color: $color-surface;
+  overflow: hidden;
+  box-shadow: 0 $opeka-space-24 $opeka-space-48 $opeka-black-5;
+}
+
+.promo-card__glow {
+  position: absolute;
+  top: -120%;
+  right: -40%;
+  width: 21.3125rem;
+  height: 21.3125rem;
+  background-image: url('/images/opeka/promo-glow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.promo-card__head {
+  position: relative;
+  z-index: 1;
+}
+
+.promo-card__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $opeka-space-24;
+}
+
+.promo-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: $opeka-space-12;
+}
+
+.promo-card__title {
+  margin: 0;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-20;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: $opeka-ls-tight;
+  color: $opeka-navy;
+}
+
+.promo-card__desc {
+  margin: 0;
+  font-family: $opeka-font;
+  font-size: $opeka-fs-16;
+  font-weight: 400;
+  line-height: $opeka-lh-16;
+  color: $opeka-text-muted;
+}
+
+.promo-card__footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $opeka-space-16;
+  margin-top: auto;
+}
+
+.promo-card__pager {
+  flex-shrink: 0;
+}
+
+.promo-card__arrows {
+  display: flex;
+  flex-shrink: 0;
+  gap: $opeka-space-4;
+}

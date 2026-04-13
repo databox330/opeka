@@ -1,8 +1,0 @@
-import './styles/main.scss'
-import { initButtons } from './components/button/button.js'
-import { initTextFields } from './components/text-field/text-field.js'
-import { initSiteShell } from './components/site-shell/site-shell.js'
-
-initSiteShell()
-initButtons()
-initTextFields()
