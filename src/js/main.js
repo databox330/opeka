@@ -1,1 +1,5 @@
-// Global client bootstrap (optional). Route entries live in src/js/pages/*.js
+import './assets-vars.js'
+import '../styles/main.scss'
+import { initHero } from './modules/scenes/hero.js'
+
+initHero()

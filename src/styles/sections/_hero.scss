@@ -44,7 +44,7 @@
   max-width: 110rem;
   aspect-ratio: 2158 / 1696;
   transform: translateY(-50%) rotate(-37deg);
-  background-image: url('/assets/images/opeka/hero-blob.png');
+  background-image: var(--opeka-img-hero-blob);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

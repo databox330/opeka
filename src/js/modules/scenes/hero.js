@@ -1,6 +1,3 @@
-/**
- * @param {ParentNode} [root]
- */
 export function initHero(root = document) {
   root.querySelectorAll('[data-hero]').forEach((section) => {
     const pager = section.querySelector('[data-pager]')

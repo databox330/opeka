@@ -1,17 +1,4 @@
 @use '../abstracts/variables' as *;
-@use '../base/reset';
-@use '../base/utilities';
-@use '../components/button';
-@use '../components/tag';
-@use '../components/text-link';
-@use '../components/pager';
-@use '../components/logo';
-@use '../components/header';
-@use '../components/footer';
-@use '../components/promo-card';
-@use '../components/cta-excursion';
-@use '../components/scroll-hint';
-@use '../sections/hero';
 
 body.page-home {
   display: flex;

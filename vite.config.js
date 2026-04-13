@@ -4,6 +4,8 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const projectRoot = __dirname
+const pagesRoot = path.join(projectRoot, 'src', 'pages')
 
 function expandIncludes(root, html, stack = new Set()) {
   return html.replace(/<!--\s*@opeka-include\s+([^>]+?)\s*-->/g, (_, rel) => {
@@ -14,48 +16,34 @@ function expandIncludes(root, html, stack = new Set()) {
   })
 }
 
-function pageHtmlPath(root, pageId) {
-  if (pageId === 'home') return path.join(root, 'src', 'pages', 'index.html')
-  return path.join(root, 'src', 'pages', `${pageId}.html`)
-}
-
-function opekaLayoutPlugin() {
-  const root = __dirname
+function opekaIncludesPlugin() {
+  const root = projectRoot
   const watchRoot = path.join(root, 'src')
   return {
-    name: 'opeka-layout',
+    name: 'opeka-includes',
     configureServer(server) {
       if (fs.existsSync(watchRoot)) server.watcher.add(watchRoot)
     },
     transformIndexHtml: {
       order: 'pre',
       handler(html) {
-        if (!html.includes('@opeka-page-body')) return html
-
-        const pageMatch = html.match(/data-opeka-page="([^"]+)"/)
-        const pageId = pageMatch?.[1] ?? 'home'
-
-        let out = expandIncludes(root, html)
-
-        const pagePath = pageHtmlPath(root, pageId)
-        if (!fs.existsSync(pagePath)) {
-          throw new Error(`[opeka-layout] Missing: ${pagePath}`)
-        }
-        const pageHtml = expandIncludes(root, fs.readFileSync(pagePath, 'utf8'))
-        return out.replace(/<!--\s*@opeka-page-body\s*-->/, pageHtml)
+        if (!html.includes('@opeka-include')) return html
+        return expandIncludes(root, html)
       },
     },
   }
 }
 
 export default defineConfig({
-  plugins: [opekaLayoutPlugin()],
+  root: pagesRoot,
+  publicDir: false,
+  plugins: [opekaIncludesPlugin()],
   build: {
-    outDir: 'dist',
+    assetsInlineLimit: 0,
+    outDir: path.join(projectRoot, 'dist'),
+    emptyOutDir: true,
     rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-      },
+      input: path.join(pagesRoot, 'index.html'),
     },
   },
 })
