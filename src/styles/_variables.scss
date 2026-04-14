@@ -1,6 +1,8 @@
 // ——— Colors ———
 $color-surface: #ffffff;
 $color-page-bg: #f8fafc;
+$color-text:   #22294F;
+$color-topbar-bg:      #F3F4F6;
 
 // Опека / Figma (main banner + UI primitives)
 $opeka-blue: #2674d9;
@@ -31,6 +33,7 @@ $opeka-space-32: 2rem;
 $opeka-space-36: 2.25rem;
 $opeka-space-40: 2.5rem;
 $opeka-space-48: 3rem;
+$opeka-space-96: 6rem;
 
 // ——— Layout ———
 $opeka-container: 96rem;
@@ -55,12 +58,16 @@ $opeka-fs-12: 0.75rem;
 $opeka-fs-14: 0.875rem;
 $opeka-fs-16: 1rem;
 $opeka-fs-20: 1.25rem;
+$opeka-fs-44: 2.75rem;
 $opeka-fs-82: clamp(2.75rem, 6vw, 5.125rem);
+$opeka-fs-102: clamp(2.75rem, 6vw, 6.375rem);
 $opeka-lh-hero: 0.8;
 $opeka-lh-16: 1.25rem;
+$opeka-lh-32: 2.5rem;
 $opeka-ls-h1: -0.04em;
 $opeka-ls-tight: -0.02em;
 $opeka-ls-14: -0.01em;
+
 
 // ——— Z-index ———
 $z-hero-body: 2;
@@ -83,3 +90,16 @@ $focus-ring-offset: 2px;
 $opeka-opacity-disabled: 0.5;
 $opeka-opacity-meta-chevron: 0.7;
 $opeka-opacity-blob: 0.85;
+
+// Border radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+
+// Z-index scale
+$z-dropdown: 100;
+$z-sticky:   200;
+$z-modal:    300;
+$z-toast:    400;
+$z-tooltip:  500;
