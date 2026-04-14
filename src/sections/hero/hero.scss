@@ -24,10 +24,6 @@
   pointer-events: none;
 }
 
-.hero__bg {
-  
-}
-
 .hero__video {
   width: 100%;
   height: 100%;
@@ -37,7 +33,7 @@
   position: relative;
   z-index: $z-hero-body;
   display: grid;
-  align-items: center;
+  align-items: end;
   flex: 1 1 auto;
   min-height: 0;
   max-width: $opeka-container;
@@ -52,13 +48,13 @@
 }
 
 .hero__intro {
-  max-width: 53rem;
+  max-width: $opeka-hero-title-848;
 }
 
 
 .hero__title {
   margin: 0 0 $opeka-space-32;
-  max-width: 53re;
+  max-width: $opeka-hero-title-848;
   font-family: $opeka-font-hoves;
   font-size: $opeka-fs-82;
   font-weight: 500;
@@ -70,7 +66,7 @@
 
 .hero__lead {
   margin: 0;
-  max-width: 30rem;
+  max-width: $opeka-hero-subTitle-480;
   font-family: $opeka-font-hoves;
   font-size: $opeka-fs-16;
   font-weight: 400;
@@ -80,7 +76,7 @@
 
 .hero__aside {
   justify-self: end;
-  padding-right: 2.25rem;
+  padding-right: $opeka-space-36;
   width: 100%;
   display: flex;
   justify-content: end;
