@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const video = document.querySelector('.hero__video')
   if (video) video.play().catch(() => {})
 
-  // GSAP animations
-//   initAnimations()
 })
 
 initHero()
