@@ -24,9 +24,9 @@
   pointer-events: none;
 }
 
-.hero_bg {
-  width: 100%;
-  height: 100%;
+.hero__bg {
+  // width: 100%;
+  // height: 100%;
 }
 
 .hero__video {
@@ -81,6 +81,7 @@
 
 .hero__aside {
   justify-self: end;
+  padding-right: 2.25rem;
   width: 100%;
   display: flex;
   justify-content: end;
