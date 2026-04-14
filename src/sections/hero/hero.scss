@@ -40,6 +40,7 @@
   align-items: center;
   flex: 1 1 auto;
   min-height: 0;
+  max-width: $opeka-container;
   width: 100%;
   margin: 0 auto;
   padding: 0 $opeka-space-36;
@@ -52,7 +53,6 @@
 
 .hero__intro {
   max-width: 53rem;
-  gap: $opeka-space-32;
 }
 
 
@@ -94,11 +94,11 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: end;
   width: 100%;
-  margin: 0 auto;
+  max-width: $opeka-container;
   padding: 0 $opeka-space-36;
   box-sizing: border-box;
   flex-shrink: 0;
-  margin-top: auto;
+  margin: 0 auto;
 }
 
 .hero__bar-start {
