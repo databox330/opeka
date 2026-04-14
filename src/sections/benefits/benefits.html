@@ -23,29 +23,28 @@
           <img class="benefits-card__img" src="../assets/images/benefit-card-01.jpg" alt="" width="400" height="300"
             loading="lazy" decoding="async" />
           <button type="button" class="benefits-card__plus" aria-label="Подробнее">
-            <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true">
-              <path fill="currentColor" d="M8.5 3v4.5H13v1H8.5V13h-1V8.5H3v-1h4.5V3z" />
-            </svg>
+            <img class="benefits-card__img" src="../assets/icons/benefits-card__plus.svg" alt="" width="16" height="16"
+              viewBox="0 0 12 12" loading="lazy" decoding="async" />
           </button>
         </div>
       </article>
     </div>
-    <div class="benefits_step-sticky">
-      <p class="benefits__watermark">Опека — это</p>
-      <div class="benefits__cta">
-        <span class="benefits__cta-text">
-          Смотреть<br />
-          наши пансионаты
-        </span>
-        <span class="benefits__cta-icon" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 12 12">
-            <path fill="currentColor" d="M3.2 4.6 6 7.4l2.8-2.8.7.7L6 8.9 2.5 5.3z" />
-          </svg>
-        </span>
-      </div>
+  </div>
+  <div class="benefits_step-sticky">
+    <p class="benefits__watermark">Опека — это</p>
+    <div class="benefits__cta">
+      <span class="benefits__cta-text">
+        Смотреть<br />
+        наши пансионаты
+      </span>
+      <span class="benefits__cta-icon" aria-hidden="true">
+        <img class="benefits-card__img" src="../assets/icons/Circle Button.svg" alt="" width="16" height="16"
+          viewBox="0 0 12 12" loading="lazy" decoding="async" />
+      </span>
     </div>
   </div>
-  <div class="benefits_step" aria-label="Опека — это">
+  </div>
+  <!-- <div class="benefits_step" aria-label="Опека — это">
     <div class="benefits__bg benefits__bg-blob--2">
       <article class="benefits-card benefits-card-blob--2">
         <div class="benefits-card__panel">
@@ -107,47 +106,47 @@
         </div>
       </article>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
 
 <!-- ScrollTrigger Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
 <script>
   // Register GSAP plugin ScrollTrigger
-  gsap.registerPlugin(ScrollTrigger);
+  // gsap.registerPlugin(ScrollTrigger);
 
-  // Pin the element within a certain scroll range
-  gsap.to(".benefits_step-sticky", {
-    scrollTrigger: {
-      trigger: ".benefits_step-sticky",
-      start: "top top+50",  // Pin when the top of the element reaches the top of the viewport
-      end: "bottom+=1000 top",  // Stop pinning after scrolling 300px past the element
-      scrub: true,  // Smooth scrolling effect
-      pin: true,  // Pin the element in place
-      pinSpacing: false,  // Don't add extra space after the element
-    }
-  });
+  // // Pin the element within a certain scroll range
+  // gsap.to(".benefits_step-sticky", {
+  //   scrollTrigger: {
+  //     trigger: ".benefits_step-sticky",
+  //     start: "top top+50",  // Pin when the top of the element reaches the top of the viewport
+  //     end: "bottom+=1000 top",  // Stop pinning after scrolling 300px past the element
+  //     scrub: true,  // Smooth scrolling effect
+  //     pin: true,  // Pin the element in place
+  //     pinSpacing: false,  // Don't add extra space after the element
+  //   }
+  // });
 </script>
 
 <!-- GSAP ScrollTo Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script> -->
 <script>
   // Register GSAP plugin
-  gsap.registerPlugin(ScrollToPlugin);
+  // gsap.registerPlugin(ScrollToPlugin);
 
-  // Scroll up function for buttons with class 'scroll-up-button'
-  document.querySelectorAll('.benefits__cta-icon').forEach(button => {
-    button.addEventListener("click", function () {
-      gsap.to(window, {
-        scrollTo: {
-          y: window.pageYOffset + 750, // Ensures scrolling up by 50px
-          autoKill: false, // Ensures the scroll action doesn't stop unexpectedly
-          duration: 1 // Duration of the scroll animation in seconds
-        }
-      });
-    });
-  });
+  // // Scroll up function for buttons with class 'scroll-up-button'
+  // document.querySelectorAll('.benefits__cta-icon').forEach(button => {
+  //   button.addEventListener("click", function () {
+  //     gsap.to(window, {
+  //       scrollTo: {
+  //         y: window.pageYOffset + 750, // Ensures scrolling up by 50px
+  //         autoKill: false, // Ensures the scroll action doesn't stop unexpectedly
+  //         duration: 1 // Duration of the scroll animation in seconds
+  //       }
+  //     });
+  //   });
+  // });
 </script>
