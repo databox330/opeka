@@ -59,7 +59,7 @@ $font: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 $font-hoves: 'TT Hoves Pro Trial', sans-serif;
 $fs-12: 0.75rem;
 $fs-14: 0.875rem;
-$fs-16: 1rem;
+$fs-16: clamp(0.5rem, 6vw, 1rem);
 $fs-20: 1.25rem;
 $fs-24: 1.5rem;
 $fs-44: 2.75rem;
