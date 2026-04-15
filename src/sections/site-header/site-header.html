@@ -77,13 +77,24 @@
       </nav>
     </div>
     <div class="site-header__tools">
-      <button class="site-header__tools__icon-btn" type="button" aria-label="Поиск">
+      <button class="site-header__tools__icon-btn " type="button" aria-label="Поиск">
         <img src="../assets/icons/search.svg" alt="Опека" width="16" height="16" />
       </button>
-      <button class="site-header__tools__icon-btn" type="button" aria-label="Личный кабинет">
+      <button class="site-header__tools__icon-btn site-header__tools__icon-btn-mobile" type="button"
+        aria-label="Личный кабинет">
         <img src="../assets/icons/user.svg" alt="Опека" width="16" height="16" />
       </button>
-      <a class="btn btn--primary" href="#"><span class="btn__label">Оставить заявку</span></a>
+      <a class="btn btn--primary btn__label-desktop" href="#"><span class="btn__label ">Оставить заявку</span></a>
+      <a class="btn btn--primary btn__label-mobile" href="#"><span class="btn__label">Записаться</span></a>
+      <button type="button" class="btn btn--menu btn--menu-mobile">
+        <span class="btn__icon" aria-hidden="true">
+          <span class="btn__burger">
+            <span class="btn__burger-line"></span>
+            <span class="btn__burger-line"></span>
+          </span>
+        </span>
+        <!-- <span class="btn__label">Меню</span> -->
+      </button>
     </div>
   </div>
 </header>
