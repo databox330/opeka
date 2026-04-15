@@ -32,14 +32,14 @@ $benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the im
   display: grid;
   place-items: center;
   position: absolute;
-  min-height: 54rem;
+  min-height: 100vh;
   width: 100%;
 }
 
 .benefits__bg {
   inset: 0;
   pointer-events: none;
-  width: 1365px;
+  width:clamp(393px, 100vw,  1365px);
   z-index: 2;
 }
 
@@ -161,9 +161,6 @@ $benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the im
   box-shadow: 0 $space-24 $space-48 rgba(34, 41, 79, 0.08);
 }
 
-.benefit-card-01 {
-  max-width: 1365px;
-}
 
 .benefits-card--tall .benefits-card__panel {
   min-height: 18rem;

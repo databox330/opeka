@@ -56,7 +56,6 @@ let slideDelay = 1.5,
   slideAnimation,
   animation = gsap.to(slides, 1, {
     yPercent: "-=" + (numSlides - 1) * 100,
-    //duration: 1,
     ease: "none",
     paused: true
   }),
