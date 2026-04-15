@@ -379,12 +379,14 @@
 // 	user-select: none;
 // }
 
-.accordionItem .accordionContent {
-	display: none;
-}
+@include mobile {
+  .accordionItem .accordionContent {
+    display: none;
+  }
 
-.accordionItem.is-open .accordionContent {
-	display: block;
+  .accordionItem.is-open .accordionContent {
+    display: block;
+  }
 }
 
 @include desktop {

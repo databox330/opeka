@@ -15,7 +15,7 @@ import '../sections/site-header/site-header.scss'
 import '../sections/hero/hero.scss'
 import '../sections/benefits/benefits.scss'
 import '../sections/site-footer/site-footer.scss'
-import './modules/scenes/footer.js' 
+import { initFooterAccordion } from './modules/scenes/footer.js'
 import { initHero } from './modules/scenes/hero.js'
 
 
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const video = document.querySelector('.hero__video')
   if (video) video.play().catch(() => { })
 
+  initFooterAccordion()
 })
 
 initHero()

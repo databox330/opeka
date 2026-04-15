@@ -1,19 +1,15 @@
-const accordionContent = document.querySelectorAll(".accordionContent");
-const accordionTitle = document.querySelectorAll(".accordionTitle");
+/**
+ * Footer nav accordion (mobile): `.accordionItem` gets `.is-open` when the row
+ * trigger is clicked; CSS shows `.accordionContent` only when open.
+ */
+export function initFooterAccordion() {
+  document.querySelectorAll('.accordionItem').forEach((item) => {
+    const trigger = item.querySelector('.site-footer__bwn')
+    if (!trigger) return
 
-
-accordionContent.forEach((accordionTitle) => {
-	accordionTitle.addEventListener("click", () => {
-		if (accordionContent.classList.contains("is-open")) {
-			accordionContent.classList.remove("is-open");
-            console.log("11111111111111111");
-		} else {
-            console.log("22222222222222222");
-			const accordionTitlesWithIsOpen = document.querySelectorAll(".is-open");
-			accordionTitlesWithIsOpen.forEach((accordionTitleWithIsOpen) => {
-				accordionTitleWithIsOpen.classList.remove("is-open");
-			});
-			accordionContent.classList.add("is-open");
-		}
-	});
-});
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault()
+      item.classList.toggle('is-open')
+    })
+  })
+}
