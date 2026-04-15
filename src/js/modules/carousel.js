@@ -53,7 +53,9 @@ export function initMobileCarousel() {
             </div>
             <a class="text-link" href="#">
               <span class="text-link__icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 16 16"></svg>
+                <svg width="16" height="16" viewBox="0 0 16 16">
+                  <use href="../assets/icons/plus.svg"></use>
+                </svg>
               </span>
               <span class="text-link__label">Узнать больше</span>
             </a>
