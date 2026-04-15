@@ -20,12 +20,12 @@ import { initHero } from './modules/scenes/hero.js'
 
 
 // // Init on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-  // Autoplay hero video
-  const video = document.querySelector('.hero__video')
-  if (video) video.play().catch(() => { })
+// document.addEventListener('DOMContentLoaded', () => {
+//   // Autoplay hero video
+//   const video = document.querySelector('.hero__video')
+//   if (video) video.play().catch(() => { })
 
-})
+// })
 
 initHero()
 
@@ -125,10 +125,10 @@ window.addEventListener("wheel", (e) => {
 });
 resize();
 
-window.addEventListener("resize", resize);
+// window.addEventListener("resize", resize);
 document
   .querySelector("#prevButton")
-  .addEventListener("click", () => animateSlides(-1));
+  // .addEventListener("click", () => animateSlides(-1));
 document
   .querySelector("#nextButton")
-  .addEventListener("click", () => animateSlides(1));
+  // .addEventListener("click", () => animateSlides(1));

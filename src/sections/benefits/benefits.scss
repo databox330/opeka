@@ -23,7 +23,6 @@ $benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the im
 }
 
 .benefit-sticky {
-  position: sticky;
   z-index: 1;
   width: 100%;
   top: 0%;
@@ -41,6 +40,7 @@ $benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the im
   inset: 0;
   pointer-events: none;
   width: 1365px;
+  z-index: 2;
 }
 
 .benefits_step * {
@@ -144,7 +144,7 @@ $benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the im
   flex-direction: column;
   gap: $space-24;
   position: absolute;
-  z-index: 100;
+  z-index: 2;
 }
 
 .benefits-card__panel {
@@ -321,7 +321,7 @@ $benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the im
   backdrop-filter: blur($blur-frost);
 }
 
-.main {
+.benefits {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -334,6 +334,7 @@ $benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the im
   position: relative;
   overflow: hidden;
   display: flex;
+  z-index: 0;
   flex: 1;
 }
 
