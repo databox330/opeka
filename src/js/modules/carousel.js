@@ -66,10 +66,8 @@ export function initMobileCarousel() {
   }
 
   function renderCarousel() {
-    // Render cards
     track.innerHTML = slides.map(slide => createCard(slide)).join('')
 
-    // Render dots
     dotsContainer.innerHTML = slides.map((_, i) => `
       <button
         type="button"
@@ -79,11 +77,10 @@ export function initMobileCarousel() {
       ></button>
     `).join('')
 
-    // Update track position
-    const cardWidth = track.querySelector('.carousel-card').offsetWidth + 16 // 16px gap
+
+    const cardWidth = track.querySelector('.carousel-card').offsetWidth + 16
     track.style.transform = `translateX(-${currentSlide * cardWidth}px)`
 
-    // Attach dot listeners
     dotsContainer.querySelectorAll('.carousel-dot').forEach(dot => {
       dot.addEventListener('click', () => {
         currentSlide = parseInt(dot.dataset.slide)
