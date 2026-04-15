@@ -1,6 +1,20 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 .site-footer {
   position: relative;
   margin-top: auto;
@@ -97,6 +111,10 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   border-radius: 1.25rem;
+
+  @include mobile {
+     width: $persent-100;
+  }
 }
 
 .site-footer__inner {
@@ -123,7 +141,27 @@
   line-height: 1.125rem;
   letter-spacing: -0.01em;
   color: $text-muted;
-  font-weight: 400;
+  font-weight: $font-w-400;
+  @include mobile {
+     color:$color-text;
+     font-size: $fs-20;
+     font-weight: $font-w-500;
+  }
+}
+
+.site-footer__bwn{
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  cursor: pointer;
+  
+}
+.site-footer__circlebutton-hid{
+  display: none;
+  @include mobile() {
+   display: flex;
+  }
 }
 
 .site-footer__links {
