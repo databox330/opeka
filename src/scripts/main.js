@@ -17,6 +17,8 @@ import { initPromoMiniSliders } from '../components/molecules/promo-mini-slider/
 import { initAvatarButtons } from '../components/atoms/avatar-button/avatar-button.js'
 import { initItsOpeka } from '../sections/its-opeka/its-opeka.js'
 import { initTabs } from '../components/atoms/tabs/tabs.js'
+import { initRate } from '../components/atoms/rate/rate.js'
+
 
 function init(root = document) {
   initAnimations(root)
@@ -24,6 +26,8 @@ function init(root = document) {
   initAvatarButtons(root)
   initItsOpeka(root)
   initTabs(root)
+  initRate(root)
+
 }
 
 /* Public API for Bitrix: call window.OpekaFront.init(container) after AJAX. */
