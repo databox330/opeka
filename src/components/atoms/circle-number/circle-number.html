@@ -11,10 +11,10 @@
    */
   const size = props.size || 'sm'
   const color = props.color || 'tr-blue'
-  const num = props.num || '01'
+  const num = props.num || 0
 
   module.exports = {
-    num,
+    number: Number.isInteger(num * 1) ?  num.toString().padStart(2, '0') : '00',
     cls: [
       'circle-number',
       'circle-number--' + size,
@@ -24,5 +24,5 @@
 </script>
 
 <span class="{{ cls }}">
-  {{ num }}
+  {{ number }}
 </span>
