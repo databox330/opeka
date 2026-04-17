@@ -5,8 +5,13 @@
 
  */
 
-.avatar-btn--space {
+.avatar-btn--tr-white_is-active {
+  outline: 2px solid $color-border-white; outline-offset: -2px;
   margin-right: 20px;
 }
 
+.avatar-btn--tr-gray_is-active {
+  outline: 2px solid $color-border-blue; outline-offset: -2px;
+  margin-right: 20px;
+}
 
