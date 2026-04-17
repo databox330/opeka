@@ -8,7 +8,7 @@
    *   src_mobile — img url for mobile(default: '')
    *   src_desktop — img url for desktop(default: '')\
    *   src_main — main img url(default: '')
-   *   description — description for img (default: '')
+   *   alt — alt for img (default: '')
    */
   
   const size = props.size || 'sm'
@@ -16,9 +16,10 @@
   const src_mobile = props.src_mobile || ''
   const src_desktop = props.src_desktop || ''
   const src_main = props.src_main || ''
-  const description = props.description || ''
+  const alt = props.alt || 'no image'
 
   module.exports = {
+    size, color, src_mobile, src_desktop, src_main, alt,
     cls: [
       'avatar-btn',
       'avatar-btn--' + size,
@@ -28,17 +29,23 @@
 
 </script>
 
-<div class="{{ cls }}">
+<div class="{{ cls }}" aria-label="{{ alt }}">
   <a>
     <picture>
-      <source
+      <if condition="src_mobile">
+        <source
         media="(max-width: 767px)"
         srcset="{{ src_mobile }}"
         type="image/webp">
-      <source
+      </if>
+      
+      <if condition="src_desktop">
+        <source
         srcset="{{ src_desktop }}"
         type="image/webp">
-      <img src="{{ src_main }}" alt="{{ description }}" loading="lazy">
+      </if>
+      
+      <img src="{{ src_main }}" alt="{{ alt }}" loading="lazy">
     </picture>
   </a>
 </div>

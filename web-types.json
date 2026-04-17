@@ -84,8 +84,8 @@
           "description": "x-avatar-button — see src\\components\\atoms\\avatar-button\\avatar-button.html",
           "attributes": [
             {
-              "name": "description",
-              "description": "description for img (default: '')",
+              "name": "alt",
+              "description": "alt for img (default: '')",
               "default": "''"
             }
           ]
