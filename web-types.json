@@ -132,13 +132,7 @@
         },
         {
           "name": "x-rate",
-          "description": "x-rate — see src\\components\\atoms\\rate\\rate.html",
-          "attributes": [
-            {
-              "name": "count",
-              "description": "1 - 5 (default : 1)s"
-            }
-          ]
+          "description": "x-rate — see src\\components\\atoms\\rate\\rate.html"
         },
         {
           "name": "x-room-card",
