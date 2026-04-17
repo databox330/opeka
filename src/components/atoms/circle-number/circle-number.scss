@@ -1,0 +1,41 @@
+@use '../../../styles/tokens' as *;
+/**
+ * .circle-button — small uppercase label.
+ *
+ * Colors: --tr-blue | --tr-orange | --tr-green | --tr-pink
+ * Sizes:  --sm (40px) | --md (58px)
+ */
+
+.circle-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-pill;
+  font-weight: $fw-medium;
+}
+
+
+/* Sizes */
+.circle-number--sm {
+  height: 34px;
+  width: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+}
+
+.circle-number--md {
+  height: 46px;
+  width: 58px;
+  padding: 0 12px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}
+
+/* Colors */
+.circle-number--tr-blue      { background-color: $blue-06p;  color: $blue-100p; }
+.circle-number--tr-orange    { background-color: $orange-10p;  color: $orange-100p; }
+.circle-number--tr-green     { background-color: $green-10p; color: $green-100p; }
+.circle-number--tr-pink      { background-color: $pink-10p; color: $pink-100p;}
