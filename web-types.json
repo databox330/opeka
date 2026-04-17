@@ -150,7 +150,7 @@
         },
         {
           "name": "x-tabs",
-          "description": "x-tabs — see src\\components\\atoms\\tabs\\tabs.html"
+          "description": "x-tabs — see src\\components\\molecules\\tabs\\tabs.html"
         },
         {
           "name": "x-tag",
