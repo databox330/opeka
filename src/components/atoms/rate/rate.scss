@@ -1,5 +1,9 @@
 @use '../../../styles/tokens' as *;
-
+/**
+ * Rate (Figma: Rate )
+ *
+ * Count: --count : count >= 1 (default : 1)
+ */
 .rate{
     display: flex;
 }
@@ -24,7 +28,7 @@
 }
 
 .rate_container{
-    background-color: $blue-20p;
+    background-color: $color-bg-blue-20;
     border-radius: 12px;
 }
 

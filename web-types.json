@@ -85,13 +85,7 @@
         },
         {
           "name": "x-number-of-seats",
-          "description": "x-number-of-seats — see src\\components\\atoms\\number-of-seats\\number-of-seats.html",
-          "attributes": [
-            {
-              "name": "count",
-              "description": "1 - 5 (default : 1)"
-            }
-          ]
+          "description": "x-number-of-seats — see src\\components\\atoms\\number-of-seats\\number-of-seats.html"
         },
         {
           "name": "x-pagination",
@@ -114,6 +108,10 @@
               "description": "1 - 5 (default : 1)s"
             }
           ]
+        },
+        {
+          "name": "x-room-card",
+          "description": "Room card: tag + title + description + image\r Composes <x-number-of-seats>."
         },
         {
           "name": "x-tag",
