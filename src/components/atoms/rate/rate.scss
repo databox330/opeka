@@ -1,5 +1,9 @@
 @use '../../../styles/tokens' as *;
-
+/**
+ * Rate (Figma: Rate )
+ *
+ * Count: --count : count >= 1 (default : 1)
+ */
 .rate{
     display: flex;
 }

@@ -1,5 +1,12 @@
 @use '../../../styles/tokens' as *;
 
+/**
+ * Number of seats (Figma: Number of seats )
+ *
+ * Sizes:  --sm | --md (only for blue)
+ * Count: --count : count >= 1 (default : 1)
+ */
+
 .seat-selector {
   padding: 20px;
   display: inline-block;

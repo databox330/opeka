@@ -5,7 +5,7 @@
  * Props:
  *   count — 1 - 5 (default : 1)s
  */
-    const count = props.count || '1'
+    const count = props.count > 5 ? 5:props.count || '5'
     module.exports = {
         steps: Array.from({ length: count }, (_, i) => i + 1),
         steps_other: Array.from({ length: 5 - count }, (_, i) => i + 1),
