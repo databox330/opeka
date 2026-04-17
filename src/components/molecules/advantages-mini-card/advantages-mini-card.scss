@@ -1,0 +1,68 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .advantages-mini-card — Advantages mini card (Figma).
+ *
+ * Shell: solid blue + large inset cyan glow (replaces legacy blur blob).
+ * Composition: .title + optional .__tags stack
+ * Modifier --in-slider: absolute positioning + data-pos stack layers.
+ *
+ * Desktop: 360×306, padding 24, radius 32
+ * Mobile:  334×240, padding 24/16, radius 26
+ */
+
+.advantages-mini-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 726px;
+  height: 792px;
+  padding: 204px 48px 0px;
+  border-radius: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  &--layer1 {
+    background-color: $color-blue;
+    box-shadow: 0 0 250px 0 $color-card-blue-glow inset;
+  }
+  &--layer2 {
+    background-color: $color-green;
+    box-shadow: 0 0 250px 0 $color-card-green-glow inset;
+  }
+  &--layer3 {
+    background-color: $color-orange;
+    box-shadow: 0 0 250px 0 $color-card-orange-glow inset;
+  }
+  &--layer4 {
+    background-color: $color-red;
+    box-shadow: 0 0 250px 0 $color-card-red-glow inset;
+  }
+}
+
+/* Content */
+.advantages-mini-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+}
+
+.advantages-mini-card__title {
+  margin: 0;
+  color: $color-text-on-dark;
+  text-align: center;
+  font-size: 58px;
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  word-break: break-word;
+  letter-spacing: -0.1em;
+  line-height: 80%;
+}
+
+.advantages-mini-card__tags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}

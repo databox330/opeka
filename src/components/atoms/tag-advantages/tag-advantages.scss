@@ -13,10 +13,9 @@
   justify-content: center;
   gap: 8px;
   border-radius: $radius-tag;
-  color: $blue-500;
+  color: $color-blue;
   font-family: $font-primary;
   font-weight: $fw-medium;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -65,10 +64,10 @@
 
 /* Colors */
 .tag-advantages--blue {
-  background-color: $blue-06p;
+  background-color: $color-tr-blue-06;
 }
 
 .tag-advantages--white {
-  background-color: $white-20;
-  color: $white;
+  background-color: $color-tr-white-20;
+  color: $color-white;
 }

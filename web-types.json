@@ -39,6 +39,10 @@
           "description": "Fills the \"tag\" slot of the parent component."
         },
         {
+          "name": "fill-tags",
+          "description": "Fills the \"tags\" slot of the parent component."
+        },
+        {
           "name": "fill-title",
           "description": "Fills the \"title\" slot of the parent component."
         },
@@ -76,8 +80,16 @@
           "description": "Named slot \"tag\" — provides default content."
         },
         {
+          "name": "slot-tags",
+          "description": "Named slot \"tags\" — provides default content."
+        },
+        {
           "name": "slot-title",
           "description": "Named slot \"title\" — provides default content."
+        },
+        {
+          "name": "x-advantages-mini-card",
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)\r Shell (Figma): <code>$color-bg-advantages-mini-card</code> +\r   <code>$color-advantages-mini-card-inset-glow</code> — override with\r   <code>--advantages-mini-card-bg</code>, <code>--advantages-mini-card-inset-glow</code>."
         },
         {
           "name": "x-button",
