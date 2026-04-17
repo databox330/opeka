@@ -105,6 +105,16 @@
           ]
         },
         {
+          "name": "x-circle-number",
+          "description": "x-circle-number — see src\\components\\atoms\\circle-number\\circle-number.html",
+          "attributes": [
+            {
+              "name": "num",
+              "description": "1"
+            }
+          ]
+        },
+        {
           "name": "x-number-of-seats",
           "description": "x-number-of-seats — see src\\components\\atoms\\number-of-seats\\number-of-seats.html"
         },
@@ -133,6 +143,10 @@
         {
           "name": "x-room-card",
           "description": "Room card: tag + title + description + image\r Composes <x-number-of-seats>."
+        },
+        {
+          "name": "x-tabs",
+          "description": "x-tabs — see src\\components\\atoms\\tabs\\tabs.html"
         },
         {
           "name": "x-tag",
