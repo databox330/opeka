@@ -221,38 +221,37 @@
 
 
 
-.btn_border--black_normal {
+.btn--border-black-normal {
   border-color: $color-border;
   border-width: 1.2px;
   border-style: solid;
 }
 
-.btn_color--black {
+.btn--color-black {
   color: $color-navy-60;
 }
 
-.btn_border--blue_bold {
+.btn--border-blue-bold {
   border-color: $color-tr-blue-100;
   border-width: 2px;
   border-style: solid;
 }
 
-.btn_color--blue {
+.btn--color-blue {
   color: $color-tr-blue-100;
 }
 
-.btn_border--white_normal {
+.btn--border-white-normal {
   border-color: $color-border-white-30;
   border-width: 1.2px;
   border-style: solid;
 }
 
-
-.btn_color--white {
+.btn--color-white {
   color: $color-text-on-dark-100;
 }
 
-.btn_border--white_bold {
+.btn--border-white-bold {
   border-color: $color-border-white-30;
   border-width: 2px;
   border-style: solid;
@@ -262,26 +261,26 @@
   background-color: $color-tr-black-10;
 }
 
-.btn_color--black {
+.btn--color-black {
   color: $color-navy-100;
 }
 
-.btn_pad--20 {
+.btn--pad-20 {
   padding: 20px;
 }
 
 /* Tab active state — toggled by tabs.js via data-tab-status */
 .tabs [data-tab-status='active'] {
-  &.btn_border--black_normal,
-  &.btn_border--blue_bold {
+  &.btn--border-black-normal,
+  &.btn--border-blue-bold {
     border-style: solid !important;
     border-color: $color-tr-blue-100 !important;
     border-width: 2px !important;
     color: $color-tr-blue-100 !important;
   }
 
-  &.btn_border--white_normal,
-  &.btn_border--white_bold {
+  &.btn--border-white-normal,
+  &.btn--border-white-bold {
     border-style: solid !important;
     border-width: 2px !important;
     color: $color-text-on-dark-100 !important;
@@ -296,18 +295,18 @@
 
 /* Tab default state — reset active-looking classes when deactivated */
 .tabs [data-tab-status='default'] {
-  &.btn_border--blue_bold {
+  &.btn--border-blue-bold {
     border-style: solid !important;
     border-color: $color-border !important;
     border-width: 1.2px !important;
     color: $color-navy-60 !important;
   }
 
-  &.btn_color--blue {
+  &.btn--color-blue {
     color: $color-navy-60 !important;
   }
 
-  &.btn_border--white_bold {
+  &.btn--border-white-bold {
     border-style: solid !important;
     border-width: 1.2px !important;
   }
