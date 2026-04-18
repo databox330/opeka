@@ -47,6 +47,10 @@
           "description": "Fills the \"tag\" slot of the parent component."
         },
         {
+          "name": "fill-tags",
+          "description": "Fills the \"tags\" slot of the parent component."
+        },
+        {
           "name": "fill-title",
           "description": "Fills the \"title\" slot of the parent component."
         },
@@ -96,6 +100,10 @@
           "description": "Named slot \"tag\" — provides default content."
         },
         {
+          "name": "slot-tags",
+          "description": "Named slot \"tags\" — provides default content."
+        },
+        {
           "name": "slot-title",
           "description": "Named slot \"title\" — provides default content."
         },
@@ -104,19 +112,46 @@
           "description": "Named slot \"unit\" — provides default content."
         },
         {
+          "name": "x-advantages-mini-card",
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
+        },
+        {
+          "name": "x-advantages-submit-card",
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
+        },
+        {
           "name": "x-avatar-button",
           "description": "x-avatar-button — see src\\components\\atoms\\avatar-button\\avatar-button.html",
           "attributes": [
             {
-              "name": "alt",
-              "description": "alt for img (default: '')",
+              "name": "active",
+              "description": "active button(default: '')",
               "default": "''"
+            }
+          ]
+        },
+        {
+          "name": "x-benefit-card",
+          "description": "x-benefit-card — see src\\components\\molecules\\benefit-card\\benefit-card.html"
+        },
+        {
+          "name": "x-benefit-icon-card",
+          "description": "x-benefit-icon-card — see src\\components\\molecules\\benefit-icon-card\\benefit-icon-card.html",
+          "attributes": [
+            {
+              "name": "icon",
+              "description": "action icon name (default: done)",
+              "default": "done"
             }
           ]
         },
         {
           "name": "x-button",
           "description": "Renders <a> when href is set, otherwise <button>."
+        },
+        {
+          "name": "x-button-step",
+          "description": "Button step."
         },
         {
           "name": "x-circle-icon",
@@ -137,6 +172,10 @@
               "description": "1"
             }
           ]
+        },
+        {
+          "name": "x-direction-card",
+          "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
         },
         {
           "name": "x-number-of-seats",
@@ -172,7 +211,7 @@
         },
         {
           "name": "x-tabs",
-          "description": "x-tabs — see src\\components\\atoms\\tabs\\tabs.html"
+          "description": "x-tabs — see src\\components\\molecules\\tabs\\tabs.html"
         },
         {
           "name": "x-tag",

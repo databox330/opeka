@@ -14,7 +14,8 @@ $color-text-disabled:    $navy-30;
 $color-text-on-dark:     $white;
 $color-text-on-dark-60:  $white-70;    // Figma: Text/Text White 60 = 70% opacity
 $color-text-on-dark-50:  $white-50;
-$color-text-on-dark-100:  $white-100;
+$color-text-on-dark-100: $white-100;
+$color-text-on-dark-0:   $white-0;
 
 // Borders
 $color-border:           $navy-10;
@@ -71,6 +72,17 @@ $color-tr-blue-06:       $blue-06p;
 $color-tr-blue-10:       $blue-10p;
 $color-tr-blue-18:       $blue-18p;
 $color-tr-blue-30:       $blue-30p;
+
+// Tags BGs
+$color-tag-bg-red:       $red-50;
+$color-tag-bg-green:     $green-50;
+
+// Advantages Card
+$color-card-blue-glow:   $blue-5;
+$color-card-green-glow:  $green-5;
+$color-card-orange-glow: $red-500;
+$color-card-red-glow:    $red-5;
+
 $color-tr-blue-100:      $blue-100p;
 
 // Transparent grey(background)
@@ -78,26 +90,26 @@ $color-tr-grey-100:      $grey-100p;
 
 // Transparent orange(buttons)
 $color-tr-orange-10:      $orange-10p;
-$color-tr-orange-100:      $orange-100p;
+$color-tr-orange-100:     $orange-100p;
 
 
 // Transparent green(buttons)
-$color-tr-green-10:      $green-10p;
+$color-tr-green-10:       $green-10p;
 $color-tr-green-100:      $green-100p;
 
 
 // Transparent pink(buttons)
-$color-tr-pink-10:      $pink-10p;
+$color-tr-pink-10:       $pink-10p;
 $color-tr-pink-100:      $pink-100p;
 
 
-//
+// Transparent orange(buttons)
 $color-tr-orange-10:     $orange-10p;
 
-//
+// Transparent red(buttons)
 $color-tr-red-10:        $red-10p;
 
-//
+// Transparent green(buttons)
 $color-tr-green-10:      $green-10p;
 
 
@@ -113,3 +125,11 @@ $content-bg:             rgba($navy-900, 0.03);
 $text-secondary:         rgba($navy-900, 0.6);
 $text-desc:              rgba($white, 0.6);
 $text-price-unit:        rgba($white, 0.7);
+$hezy-100p:              $hezy-100p;
+$color-bg-card:          $navy-03;
+$color-bg-white:         $white;
+$color-primary:         $navy-900;
+$color-secondary:        $navy-60;
+$color-accent:           $blue-500;
+$color-button-bg:        $navy-05;
+$color-border-icon:      $navy-900;
